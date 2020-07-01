@@ -1,5 +1,5 @@
 
-// Test 1.
+// Test 1.2
 function answer(q) {
     return 42;
 }
