@@ -6,7 +6,7 @@ on:
       - "master"
 
 jobs:
-  auto-publish
+  auto-publish:
     name: "AutoPublish on master"
     runs-on: ubuntu-latest
 
