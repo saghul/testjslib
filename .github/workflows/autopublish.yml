@@ -16,9 +16,10 @@ jobs:
         with:
           fetch-depth: 0
           ref: master
+      - name: "Setup npmrc"
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > $HOME/.npmrc
       - name: "Automated Release"
         uses: "saghul/gh-action-autopublish@master"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-
